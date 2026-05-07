@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Snake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="game-container glass">
+        <header>
+            <div class="score-board">
+                <div class="score-label">SCORE</div>
+                <div id="score" class="score-value">0</div>
+            </div>
+            <div class="high-score-board">
+                <div class="score-label">BEST</div>
+                <div id="high-score" class="score-value">0</div>
+            </div>
+        </header>
+
+        <div class="canvas-wrapper">
+            <canvas id="game-board" width="600" height="600"></canvas>
+            
+            <div id="start-screen" class="overlay glass-overlay active">
+                <h1>SNAKE</h1>
+                <p>Eat standard food. Beware of the unexpected.</p>
+                <div class="legend">
+                    <div class="legend-item"><span class="color-box standard"></span> Food</div>
+                    <div class="legend-item"><span class="color-box poison"></span> Poison</div>
+                    <div class="legend-item"><span class="color-box portal"></span> Portal</div>
+                    <div class="legend-item"><span class="color-box wall"></span> Wall</div>
+                </div>
+                <button id="start-btn" class="fancy-btn">Play Now</button>
+            </div>
+
+            <div id="game-over-screen" class="overlay glass-overlay">
+                <h2>Game Over</h2>
+                <p id="final-message">You hit a wall!</p>
+                <div class="final-score">Score: <span id="final-score-value">0</span></div>
+                <button id="restart-btn" class="fancy-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
